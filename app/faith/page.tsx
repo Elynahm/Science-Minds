@@ -1,89 +1,104 @@
-"use client";
-
-import { useState } from "react";
-
 export default function FaithPage() {
-  const [liveStatus] = useState("Live starting soon");
-
   return (
     <main style={styles.container}>
-      <h1>🙏 Faith & Life Lessons</h1>
+      <div style={styles.card}>
+        <h1 style={styles.title}>🙏 Faith & Life</h1>
 
-      <p style={styles.subtitle}>
-        Spiritual growth • Motivation • Life guidance
-      </p>
+        <p style={styles.text}>
+          Welcome to Faith & Life — a space for reflection, wisdom, and personal growth.
+        </p>
 
-      <div style={styles.liveBox}>
-        <h2>📡 Live Window</h2>
-        <p>{liveStatus}</p>
+        <p style={styles.subtext}>
+          “Seek wisdom, build character, and grow in purpose every day.”
+        </p>
 
-        <div style={styles.videoPlaceholder}>
-          🎥 Live video will appear here
-        </div>
-      </div>
-
-      <div style={styles.cards}>
-        <div style={styles.card}>
-          <h3>Faith Talks</h3>
-          <p>Weekly inspirational teachings</p>
+        <div style={styles.quoteBox}>
+          ✨ “Faith is not about seeing everything clearly, but trusting even when you cannot.”
         </div>
 
-        <div style={styles.card}>
-          <h3>Life Skills</h3>
-          <p>Discipline, focus, and personal growth</p>
-        </div>
+        <div style={styles.sections}>
+          <div style={styles.sectionCard}>
+            <h3>📖 Daily Reflection</h3>
+            <p>Short messages to guide your mindset and discipline.</p>
+          </div>
 
-        <div style={styles.card}>
-          <h3>Motivation</h3>
-          <p>Daily encouragement and mindset building</p>
+          <div style={styles.sectionCard}>
+            <h3>🧠 Life Lessons</h3>
+            <p>Practical wisdom for school, relationships, and growth.</p>
+          </div>
+
+          <div style={styles.sectionCard}>
+            <h3>🎯 Purpose</h3>
+            <p>Stay focused on goals, identity, and long-term success.</p>
+          </div>
         </div>
       </div>
     </main>
   );
 }
 
-const styles: Record<string, React.CSSProperties> = {
+/* ================= STYLES ================= */
+
+const styles = {
   container: {
-    padding: "40px",
-    fontFamily: "Arial",
-    textAlign: "center",
-    backgroundColor: "#fffaf3",
     minHeight: "100vh",
-  },
-  subtitle: {
-    color: "#555",
-    marginBottom: "20px",
-  },
-  liveBox: {
-    margin: "20px auto",
-    padding: "20px",
-    maxWidth: "600px",
-    borderRadius: "12px",
-    border: "2px solid #d4af37",
-    backgroundColor: "#fff",
-  },
-  videoPlaceholder: {
-    marginTop: "15px",
-    height: "200px",
+    padding: "40px",
+    background: "linear-gradient(135deg,#02122e,#052b78,#041a45)",
     display: "flex",
-    alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#f1f5f9",
-    borderRadius: "10px",
-  },
-  cards: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-    gap: "15px",
-    marginTop: "30px",
-    maxWidth: "900px",
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
+    alignItems: "center",
+    fontFamily: "Arial",
+  } as React.CSSProperties,
+
   card: {
+    maxWidth: "800px",
+    width: "100%",
+    padding: "30px",
+    borderRadius: "15px",
+    background: "rgba(0,0,0,0.4)",
+    border: "1px solid #d4af37",
+    textAlign: "center",
+    boxShadow: "0 0 20px rgba(0,0,0,0.4)",
+  } as React.CSSProperties,
+
+  title: {
+    fontSize: "2.8rem",
+    color: "#4169e1",
+    marginBottom: "10px",
+    textShadow: "0 0 15px rgba(65,105,225,0.4)",
+  } as React.CSSProperties,
+
+  text: {
+    color: "#ffffff",
+    fontSize: "1.1rem",
+    marginBottom: "10px",
+  } as React.CSSProperties,
+
+  subtext: {
+    color: "#d4af37",
+    marginBottom: "20px",
+  } as React.CSSProperties,
+
+  quoteBox: {
     padding: "15px",
-    backgroundColor: "white",
     borderRadius: "10px",
-    border: "1px solid #eee",
-  },
+    background: "rgba(212,175,55,0.1)",
+    border: "1px solid #d4af37",
+    marginBottom: "25px",
+    color: "#fff",
+  } as React.CSSProperties,
+
+  sections: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+    gap: "15px",
+  } as React.CSSProperties,
+
+  sectionCard: {
+    background: "rgba(255,255,255,0.05)",
+    border: "1px solid #4169e1",
+    padding: "15px",
+    borderRadius: "12px",
+    color: "#fff",
+  } as React.CSSProperties,
 };
