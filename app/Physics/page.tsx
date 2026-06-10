@@ -13,14 +13,12 @@ export default function PhysicsPage() {
         </p>
 
         <div style={styles.highlightBox}>
-          ⚡ “Understanding the universe through motion, energy, and force.”
+          ⚡ Understanding the universe through motion, energy, and force.
         </div>
       </div>
     </main>
   );
 }
-
-/* ================= STYLES ================= */
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
@@ -40,35 +38,31 @@ const styles: Record<string, React.CSSProperties> = {
     borderRadius: "15px",
     background: "rgba(0,0,0,0.4)",
     border: "1px solid #d4af37",
-    boxShadow: "0 0 20px rgba(0,0,0,0.4)",
     textAlign: "center",
   },
 
   title: {
     color: "#4169e1",
     fontSize: "2.5rem",
-    marginBottom: "10px",
-    textShadow: "0 0 15px rgba(65,105,225,0.5)",
   },
 
   text: {
-    color: "#ffffff",
+    color: "#fff",
     fontSize: "1.1rem",
-    marginBottom: "10px",
+    marginTop: "10px",
   },
 
   subtext: {
     color: "#d4af37",
-    fontSize: "1rem",
-    marginBottom: "20px",
+    marginTop: "10px",
   },
 
   highlightBox: {
     marginTop: "20px",
     padding: "15px",
     borderRadius: "10px",
-    background: "rgba(212,175,55,0.1)",
     border: "1px solid #d4af37",
-    color: "#ffffff",
+    background: "rgba(212,175,55,0.1)",
+    color: "#fff",
   },
 };
